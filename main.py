@@ -1,7 +1,8 @@
 import os
-
-os.environ['PYTHON_VLC_MODULE_PATH'] = 'vlc'
 import sys
+
+if sys.platform.startswith("win32"):
+    os.environ['PYTHON_VLC_MODULE_PATH'] = 'vlc-win32'
 
 from PySide2 import QtWidgets
 
