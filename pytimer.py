@@ -25,6 +25,7 @@ class PyTimer:
             dt = 0.005
 
         if once:
+            self.running = True
             deadline = time.time() + interval
             while time.time() < deadline:
                 time.sleep(dt)
